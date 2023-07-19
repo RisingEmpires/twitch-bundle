@@ -13,7 +13,7 @@ export function getTwitchAuthRouter(nodecg: NodeCG, twitchCredentials: Replicant
 			.addSearch("redirect_uri", getCallbackUrl(nodecg))
 			.addSearch("response_type", "code")
 			.addSearch("force_verify", "true")
-			.addSearch("scope", "channel:read:subscriptions bits:read channel:read:redemptions channel_subscriptions chat:read chat:edit");
+			.addSearch("scope", "channel:read:subscriptions bits:read channel:read:redemptions channel_subscriptions chat:read chat:edit channel:manage:predictions");
 
 		res.redirect(uri.toString());
 	});
